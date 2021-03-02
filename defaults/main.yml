@@ -124,6 +124,8 @@ gnocchi_service_internalurl: "{{ gnocchi_service_internaluri }}"
 gnocchi_service_adminuri: "{{ gnocchi_service_adminuri_proto }}://{{ internal_lb_vip_address }}:{{ gnocchi_service_port }}"
 gnocchi_service_adminurl: "{{ gnocchi_service_adminuri }}"
 
+gnocchi_service_in_ldap: "{{ service_ldap_backend_enabled | default(False) }}"
+
 ## Apache setup
 gnocchi_apache_log_level: info
 gnocchi_apache_servertokens: "Prod"
